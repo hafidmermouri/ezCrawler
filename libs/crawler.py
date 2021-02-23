@@ -27,13 +27,6 @@ class Crawler() :
             if not os.path.isdir(f) :
                 os.makedirs(f, exist_ok=True)
         print(self.output_dir)
-    def run_multiple(self, url):
-
-        self.queue = []
-        self.queue.append([url, 0])
-        import joblib
-        n=1
-        joblib.Parallel(n_jobs=n)(joblib.delayed(self.crawl(item) for item in self.queue))
     def run(self, url):
         self.init(url)
         self.queue = []
@@ -60,7 +53,6 @@ class Crawler() :
             i+=1
 
         self.save()
-
 
     def save(self):
         filename = os.path.join(self.output_dir, "crawl_%s.csv" % str(datetime.date.today()))
