@@ -1,11 +1,12 @@
 # ezCrawler
 
 ## Simple python crawler
-Crawl any website, and turn it to csv data
+Crawl any website, and turn it into csv or json structured data
+
 Scrape any information you need using Xpath
 
 ## Installation
-1. clone repo: ``git clone https://github.com/hafidmermouri/ezCrawler.git`
+1. clone repo: `git clone https://github.com/hafidmermouri/ezCrawler.git`
 2. install requirements: `python3 -m pip3 install -r requirements.txt`
 3. you can start enjoying the easy crawler
 
